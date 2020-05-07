@@ -28,7 +28,6 @@ export function Start (props) {
 
   //Timer with 1 minute duration 
 
-
 	function startTimer(e) {
      let count = 1;
 	   document.getElementById('paraEnter').disabled = false;
@@ -42,7 +41,8 @@ export function Start (props) {
       count++;
       },1000)
 
-	    setTimeout(function(){
+	    var timerend = 
+      setTimeout(function(){
           clearInterval(timer)
 	        document.getElementById('startbt').style.background = 'orangered';
 	        document.getElementById('paraEnter').disabled = true; 
@@ -104,6 +104,11 @@ export function Start (props) {
       }
       setWpm(wpm)
 	}
+
+  function reloadText() {
+    setTimeout(function(){window.location.reload(false)},500)
+  
+  }
 	
 
 	function fetchText() {
@@ -162,7 +167,7 @@ export function Start (props) {
                     <div className='test-card'>
                         <div className='para-card'>
                             { loading ? <div style={{display:'flex',justifyContent:'center'}}> <TextLoader/> </div> : rows }
-                            <div className='reloadbt' onClick={fetchText}>
+                            <div className='reloadbt' onClick={reloadText}>
                             	<span className='reload'> 
                             	< IoMdRefresh /> 
                             	</span>
