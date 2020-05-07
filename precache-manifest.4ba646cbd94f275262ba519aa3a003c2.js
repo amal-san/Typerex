@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6bb5c91567e4f6c676e0bf48916d039b",
+    "revision": "806fe1e6a985de3ee877b7aaa2f96f39",
     "url": "/Typerex/index.html"
   },
   {
