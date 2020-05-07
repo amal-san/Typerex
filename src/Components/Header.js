@@ -20,7 +20,7 @@ class Header extends React.Component {
 		localStorage.removeItem('typerex_username')
 		localStorage.removeItem('wpm')
 		localStorage.removeItem('isLoggedin')
-		window.location.href = '/';
+		window.location.href = '/Typerex/';
 
 
 	}
@@ -33,7 +33,7 @@ class Header extends React.Component {
 				<div className='user-item'></div>
 				<div className="nav-item">
 					<a
-						href="/"
+						href="/Typerex/"
 						style={{ textDecoration: "none", color: "white" }}
 					>
 

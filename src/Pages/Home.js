@@ -29,7 +29,7 @@ export function Home(props) {
     			 cogoToast.success(
   	              <div>
   	                <div>Logged in successfully!</div>
-  	              </div>,{ hideAfter:3},
+  	              </div>,{ hideAfter:2},
   	             );
     			 props.history.push('/start')
     			})
@@ -39,7 +39,7 @@ export function Home(props) {
       cogoToast.error(
         <div>
           <div>Enter a username!</div>
-        </div>,{ hideAfter:3},
+        </div>,{ hideAfter:1},
       );
     }
 
@@ -47,7 +47,8 @@ export function Home(props) {
 
 	  useEffect((props) => {
 	  document.title='Typerex';
-    console.log(auth.isAuthenticated())
+    document.getElementById('username').innerHTML = ' ';
+    document.getElementById('user-wpm').innerHTML = ' ';
 
       const username = localStorage.getItem('typerex_username');
       auth.userInfo(username)
