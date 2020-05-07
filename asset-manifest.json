@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Typerex/static/css/main.77b58855.chunk.css",
-    "main.js": "/Typerex/static/js/main.bb02a1ab.chunk.js",
-    "main.js.map": "/Typerex/static/js/main.bb02a1ab.chunk.js.map",
+    "main.js": "/Typerex/static/js/main.b28d1f41.chunk.js",
+    "main.js.map": "/Typerex/static/js/main.b28d1f41.chunk.js.map",
     "runtime-main.js": "/Typerex/static/js/runtime-main.906e8eaf.js",
     "runtime-main.js.map": "/Typerex/static/js/runtime-main.906e8eaf.js.map",
     "static/js/2.a36a5426.chunk.js": "/Typerex/static/js/2.a36a5426.chunk.js",
     "static/js/2.a36a5426.chunk.js.map": "/Typerex/static/js/2.a36a5426.chunk.js.map",
     "index.html": "/Typerex/index.html",
-    "precache-manifest.050e4c151a76632b849b5a0091ba5e1b.js": "/Typerex/precache-manifest.050e4c151a76632b849b5a0091ba5e1b.js",
+    "precache-manifest.f595c32faf1713573e9e5f5b599653b6.js": "/Typerex/precache-manifest.f595c32faf1713573e9e5f5b599653b6.js",
     "service-worker.js": "/Typerex/service-worker.js",
     "static/css/main.77b58855.chunk.css.map": "/Typerex/static/css/main.77b58855.chunk.css.map",
     "static/js/2.a36a5426.chunk.js.LICENSE.txt": "/Typerex/static/js/2.a36a5426.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.906e8eaf.js",
     "static/js/2.a36a5426.chunk.js",
     "static/css/main.77b58855.chunk.css",
-    "static/js/main.bb02a1ab.chunk.js"
+    "static/js/main.b28d1f41.chunk.js"
   ]
 }
