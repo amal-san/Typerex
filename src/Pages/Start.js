@@ -68,7 +68,7 @@ export function Start (props) {
 		        console.log(e)
 		    })
 
-	    },6000)
+	    },60000)
 	}
 
 	const history = useHistory();
