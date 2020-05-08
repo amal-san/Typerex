@@ -27,16 +27,14 @@ function LogoutMenu() {
 		localStorage.removeItem('typerex_username')
 		localStorage.removeItem('wpm')
 		localStorage.removeItem('isLoggedin')
+		setTimeout(function(){window.location.href = '/Typerex/'},1000)
 		auth.userDelete(username)
 		      .then(() => {
 		      	cogoToast.warn(
 	              <div>
 	                <div><b>Account with {username} is deleted ☠️</b></div>
 	              </div>,{ hideAfter:3},
-	            );
-	            
-	            setTimeout(function(){window.location.href = '/Typerex/'},1000)
-		        
+	            );		        
 		      })
 		      .catch(e => {
 		        console.log(e)
