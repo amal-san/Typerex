@@ -57,7 +57,6 @@ export function Home(props) {
       })
       .catch(e => {
       	setisloggedin(false)
-        console.log('home')
       })
 
      

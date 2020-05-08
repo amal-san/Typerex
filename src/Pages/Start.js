@@ -30,6 +30,7 @@ export function Start (props) {
 
 	function startTimer(e) {
      let count = 1;
+     document.getElementById("paraEnter").focus();
 	   document.getElementById('paraEnter').disabled = false;
 	   document.getElementById('startbt').style.background = 'green';
 	   var start = document.getElementById("startbt");
@@ -55,7 +56,7 @@ export function Start (props) {
             setTimeout(function(){window.location.reload(false)},5000)
 		      	cogoToast.success(
 	              <div>
-	                <div><b>Your wpm is { wpm }</b><br></br><i> Click the start button </i></div>
+	                <div><b>Your wpm is { wpm }</b></div>
 	              </div>,{ hideAfter:5},
 	            );
 	            localStorage.setItem('wpm',wpm)
@@ -145,9 +146,7 @@ export function Start (props) {
     document.getElementById('user-wpm').innerHTML = 'Current wpm: ' + localStorage.getItem('wpm') + ' 💨';
       auth.userInfo(username)
       .then((data) => {
-        console.log('logged in')
-        
-
+          
         
       })
       .catch(e => {
