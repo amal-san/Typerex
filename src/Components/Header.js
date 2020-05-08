@@ -35,7 +35,7 @@ function LogoutMenu() {
 	              </div>,{ hideAfter:3},
 	            );
 	            
-	            setTimeout(function(){window.location.href = '/'},1000)
+	            setTimeout(function(){window.location.href = '/Typerex/'},1000)
 		        
 		      })
 		      .catch(e => {
