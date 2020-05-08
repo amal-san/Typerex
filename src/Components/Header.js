@@ -2,22 +2,56 @@ import React from "react"
 import '../index.css';
 import { Menu, Item, Separator, Submenu, MenuProvider } from 'react-contexify';
 import 'react-contexify/dist/ReactContexify.min.css';
+import auth from './auth';
+import cogoToast from 'cogo-toast';
 
 
-const onClick = ({ props }) => {
-
-	localStorage.removeItem('typerex_username')
-	localStorage.removeItem('wpm')
-	localStorage.removeItem('isLoggedin')
-	window.location.href = '/Typerex/';
-};
 
 
-const LogoutMenu = () => (
-    <Menu id='menu_id' >
-       <Item onClick={onClick}>Logout</Item>
-   </Menu>
-);
+
+function LogoutMenu() {
+
+
+
+	function onClick() {
+
+		localStorage.removeItem('typerex_username')
+		localStorage.removeItem('wpm')
+		localStorage.removeItem('isLoggedin')
+		window.location.href = '/Typerex/';
+
+	}
+
+	function deleteAccount() {
+		const username = localStorage.getItem('typerex_username')
+		localStorage.removeItem('typerex_username')
+		localStorage.removeItem('wpm')
+		localStorage.removeItem('isLoggedin')
+		auth.userDelete(username)
+		      .then(() => {
+		      	cogoToast.warn(
+	              <div>
+	                <div><b>Account with {username} is deleted ☠️</b></div>
+	              </div>,{ hideAfter:3},
+	            );
+	            
+	            setTimeout(function(){window.location.href = '/'},1000)
+		        
+		      })
+		      .catch(e => {
+		        console.log(e)
+		    })
+	}
+
+	return (
+		<Menu id='menu_id' >
+        <Item onClick={onClick}>🚶Logout</Item>
+        <Item onClick={deleteAccount}>⚠️ Delete Account</Item>
+      </Menu>
+
+	)
+}
+
 
 
 
@@ -31,7 +65,7 @@ const Header = (props) => (
 						style={{ textDecoration: "none", color: "white" }}
 					>
 
-						typerex
+						Typerex
 					</a>
 				</div>
 				<div className='user-item-main'>

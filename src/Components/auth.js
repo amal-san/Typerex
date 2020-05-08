@@ -98,6 +98,25 @@ class Auth {
 		cb()
 	}
 
+	async userDelete(username) {
+		const result = await client
+		  .mutate({
+		  	mutation:gql`
+		  	mutation {
+				  userDelete(username:"${username}"){
+				    username
+
+					}
+				}
+		  	`
+		  })
+		  .then(function(result){
+		  	return result;
+		  })
+		  .catch(e => console.log(e))
+   		  return result;
+	}
+	
 
 
 
