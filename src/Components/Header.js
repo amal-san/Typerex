@@ -65,7 +65,7 @@ const Header = (props) => (
 						style={{ textDecoration: "none", color: "white" }}
 					>
 
-						Typerex
+						Typerex ✨
 					</a>
 				</div>
 				<div className='user-item-main'>
