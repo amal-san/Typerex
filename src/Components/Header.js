@@ -70,7 +70,7 @@ const Header = (props) => (
 				</div>
 				<div className='user-item-main'>
 					<div className='user-item-sub'>
-					<MenuProvider id="menu_id">
+					<MenuProvider id="menu_id" event="onClick">
 						<>
 						<p style={{marginBottom:'0'}}><b id='username'></b></p>
 						<p id='user-wpm' style={{margin:'0'}}></p>
