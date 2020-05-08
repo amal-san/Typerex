@@ -118,7 +118,7 @@ export function Home(props) {
 							<h2>
 								<a
 									className="FaGithub"
-									href="https://github.com/amal-san/typerex"
+									href="https://github.com/amal-san/Typerex"
 								>
 									<FaGithub />
 								</a>
