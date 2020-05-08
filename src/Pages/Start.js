@@ -13,6 +13,7 @@ import { FaUser } from "react-icons/fa";
 
 
 
+
 export function Start (props) {
 
 	const[ data , setData ] = useState(false)
@@ -50,15 +51,15 @@ export function Start (props) {
 	        var text = document.getElementById('wpm').innerHTML
 	        var wpm = text.split(":")[1]
 	        var username = localStorage.getItem("typerex_username")
-
+          cogoToast.success(
+                <div>
+                  <div><b>Your wpm is &nbsp; { wpm }</b></div>
+                </div>,{ hideAfter:4},
+          );
 	        auth.userUpdate(username,wpm)
 		      .then(() => {
-            setTimeout(function(){window.location.reload(false)},5000)
-		      	cogoToast.success(
-	              <div>
-	                <div><b>Your wpm is { wpm }</b></div>
-	              </div>,{ hideAfter:5},
-	            );
+            setTimeout(function(){window.location.reload(false)},500)
+		      	
 	            localStorage.setItem('wpm',wpm)
 
 		        
@@ -67,7 +68,7 @@ export function Start (props) {
 		        console.log(e)
 		    })
 
-	    },60000)
+	    },6000)
 	}
 
 	const history = useHistory();

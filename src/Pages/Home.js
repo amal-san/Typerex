@@ -18,19 +18,22 @@ export function Home(props) {
 	const history = useHistory();
 
 
-	async function handleClick(e){
+	async function handleClick(e){ 
 		e.preventDefault();
 		const username = document.getElementById('uname').value;
     if(username){
-  		await auth.login(username)
+    cogoToast.loading(<div><div> Log in processing.. </div> </div>).then(() => {
+      cogoToast.success(
+          <div>
+            <div>💚 Logged in successfully!</div>
+          </div>,{ hideAfter:2},
+      );
+    });
+  	const data = await auth.login(username)
     		.then((data) => {
     			 localStorage.setItem('typerex_username',data.data.userAdd.username);
     			 localStorage.setItem('wpm',data.data.userAdd.wpm);
-    			 cogoToast.success(
-  	              <div>
-  	                <div>Logged in successfully!</div>
-  	              </div>,{ hideAfter:2},
-  	             );
+    			 
     			 props.history.push('/start')
     			})
     		.catch(e => console.log('home'))
@@ -38,8 +41,8 @@ export function Home(props) {
     else {
       cogoToast.error(
         <div>
-          <div>Enter a username!</div>
-        </div>,{ hideAfter:1},
+          <div>Enter a username! </div>
+        </div>,{hideAfter:1,heading: 'Error'},
       );
     }
 
@@ -49,6 +52,7 @@ export function Home(props) {
 	  document.title='Typerex';
     document.getElementById('username').innerHTML = ' ';
     document.getElementById('user-wpm').innerHTML = ' ';
+
 
       const username = localStorage.getItem('typerex_username');
       auth.userInfo(username)
@@ -137,7 +141,8 @@ export function Home(props) {
 			</div>
 			<div className="shapes">
 				<span className="wrap">
-					<div className="clip-1"></div>
+					<div className="clip-1">
+          </div>
 				</span>
 		     </div>
 		    <section>
@@ -148,8 +153,8 @@ export function Home(props) {
     	return (
     		 <>
 
-	         <div className="home" style={{ height: "100vh",background:'#f4a99ad6',margin:'0 auto',padding:'10%'}}>
-		      <ReactLoading type={'bubbles'} color={''} height={150} width={250} className='loader'/>
+	         <div className="home" style={{ height: "100vh",background:'white',margin:'0 auto',padding:'10%'}}>
+		      <ReactLoading type={'bubbles'} color={'orangered'} height={150} width={250} className='loader'/>
 	         </div> 
 			</>	
 		);
