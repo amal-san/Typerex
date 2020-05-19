@@ -26,9 +26,6 @@ export function Start (props) {
 
 
 
-
-  //Timer with 1 minute duration 
-
 	function startTimer(e) {
      let count = 1;
      document.getElementById("paraEnter").focus();
@@ -115,7 +112,7 @@ export function Start (props) {
 
 	function fetchText() {
 
-		const url = "https://typeracingapi.rishikc.com/.netlify/functions/server/text/";
+		const url = "https://typerex-sentencer.herokuapp.com/text/";
 
         // Request
         setLoading(true);
