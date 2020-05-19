@@ -25,7 +25,7 @@ export function Home(props) {
     cogoToast.loading(<div><div> Log in processing.. </div> </div>).then(() => {
       cogoToast.success(
           <div>
-            <div>💚 Logged in successfully!</div>
+            <div> Logged in successfully!</div>
           </div>,{ hideAfter:2},
       );
     });
@@ -82,8 +82,8 @@ export function Home(props) {
 		<div className="home-card">
 			<h1 style={{ color: "black" }}><span role='img'>⌨️ </span> Welcome to open-source typing platform <span>typerex</span></h1>
 			<p className="main-p">
-				Typing platform for finding out the average typing speed of
-				every user using wpm (words per minute) <span role='img'>💙.</span>
+				Open source typing platfrom to find out your words per minute. Start the test with any username &nbsp;
+   <span role='img'>🧡.</span>
 			</p>
 			<div className="login">
 				<section>
