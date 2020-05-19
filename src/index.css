@@ -85,6 +85,7 @@ body {
 	margin-top:'none';
   font-size:1em;
   color:black;
+  outline: black;
 }
 
 .home-card > img {
@@ -172,7 +173,7 @@ body {
 
 
 .main-p {
-  font-size:1.2em;
+  font-size:1.8em;
 }
 
 @media only screen and (max-width: 668px) {
