@@ -92,6 +92,25 @@ class Auth {
 		return result;
 	}
 
+	async Text() {
+		const result = await client
+		  .query({
+			query:gql`
+			{
+				Text
+			}`
+		})
+		.then(function (result){
+			console.log(result)
+			return result;
+		})
+		.catch ( e => {
+			return e;
+		} )
+		
+	  return result;
+	}
+
 
 	logout(cb) {
 		this.authenticated = false;
