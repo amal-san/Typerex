@@ -21,6 +21,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    - name: Configuring Github credentials
+       run:|  git config --global user.email "amaldemaniax@gmail.com"
+              git config --global user.name "amal-san"
 
     # Runs a set of commands using the runners shell
     - name:  Install Dependencies
@@ -31,4 +35,5 @@ jobs:
 
     - name: Deploy
       run: yarn run deploy
+      
 
