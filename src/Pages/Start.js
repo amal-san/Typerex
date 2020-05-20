@@ -5,13 +5,6 @@ import { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import TextLoader from '../Components/TextLoader';
 import cogoToast from 'cogo-toast';
-import { FaUser } from "react-icons/fa";
-
-
-
-
-
-
 
 
 export function Start (props) {
@@ -40,7 +33,6 @@ export function Start (props) {
       count++;
       },1000)
 
-	    var timerend = 
       setTimeout(function(){
           clearInterval(timer)
 	        document.getElementById('startbt').style.background = 'orangered';
@@ -116,15 +108,13 @@ export function Start (props) {
 
     auth.Text()
       .then((data) => {
-
-        console.log(data.data.Text)   
-        setLoading(false)
-        setData(true)
-        setText(data.data.Text)
+        setLoading(false);
+        setData(true);
+        setText(data.data.Text.substr(1));
         
       })
       .catch(e => {
-        setData(false)
+        setData(false);
       })
 
 	}

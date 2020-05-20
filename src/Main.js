@@ -8,7 +8,6 @@ import Header from './Components/Header';
 import {Start} from './Pages/Start';
 import {Home} from './Pages/Home';
 import { ProtectedRoute } from './Components/ProtectedRoute';
-import auth from './Components/auth';
 
  
 function Main() {
