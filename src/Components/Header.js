@@ -1,6 +1,6 @@
 import React from "react"
 import '../index.css';
-import { Menu, Item, Separator, Submenu, MenuProvider } from 'react-contexify';
+import { Menu, Item, MenuProvider } from 'react-contexify';
 import 'react-contexify/dist/ReactContexify.min.css';
 import auth from './auth';
 import cogoToast from 'cogo-toast';
@@ -83,29 +83,5 @@ const Header = (props) => (
 
 
 	)
-
-// class Header extends React.Component {
-
-// 	// constructor(){
-
-// 	// 	super()
-
-// 	// 	this.handleClick = this.handleClick.bind(this);
-// 	// }
-
-
-
-// 	// handleClick() {
-
-
-
-// 	// }
-
-
-// 	render() {
-// 		return(
-// 		)
-// 	}
-// }
 
 export default Header

@@ -101,7 +101,6 @@ class Auth {
 			}`
 		})
 		.then(function (result){
-			console.log(result)
 			return result;
 		})
 		.catch ( e => {
