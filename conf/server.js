@@ -1,80 +1,9 @@
-// const cors = require('cors');
-// var bodyParser = require('body-parser');
-// var express = require("express");
-// var app = express();
-// app.use(cors());
-// app.options('*', cors());
-// app.use(bodyParser.urlencoded({extended:false}));
-// app.use(bodyParser.json());
 var dbutils = require("./utils/dbutils");
-
-
-// // set the port of our application
-// // process.env.PORT lets the port be set by Heroku
-// var port = process.env.PORT || 8080;
-
-// // set the view engine to ejs
-// app.set("view engine", "ejs");
-
-// // make express look in the public directory for assets (css/js/img)
-// app.use(express.static(__dirname + "/public"));
-
-// // set the home page route
-// app.get("/", function(req, res) {
-// 	// ejs render automatically looks in the views folder
-// 	res.render("index", { description: "Urls are here:" });
-// });
-
-// app.post("/test", function(req, res) {
-// 	res.send("POST REQUEST TO SERVER");
-// });
-
-// app.get("/test", function(req, res) {
-// 	res.send("GET REQUEST TO SERVER");
-// });
-
-// app.get("/dbList", function(req, res) {
-// 	dbutils
-// 		.db("listDatabases")
-// 		.then((data) => res.json(data))
-// 		.catch((e) => console.log(e));
-// });
-
-// app.post("/addUser", function(req, res) {
-	
-// 	var fullUrl = req.originalUrl.slice(1, -1);
-// 	dbutils
-// 		.db(fullUrl,req.body.input)
-// 		.then(function(data) {
-// 			res.json(data);
-// 		})
-// 		.catch((e) => res.send("db_not_working"));
-// });
-
-// app.post("/updateUser", function(req, res) {
-// 	var fullUrl = req.originalUrl.slice(1, -1);
-// 	dbutils
-// 		.db(fullUrl, req.body.input,req.body.wpm)
-// 		.then(function(data) {
-// 			res.json(data);
-// 		})
-// 		.catch((e) => res.send("db_not_working"));
-// });
-
-// app.post("/infoUser", function(req, res) {
-// 	var fullUrl = req.originalUrl.slice(1, -1);
-// 	dbutils
-// 		.db(fullUrl, req.body.username)
-// 		.then(function(data) {
-// 			res.json(data);
-// 		})
-// 		.catch((e) => res.send("db_not_working"));
-// });
-
-// app.listen(port, function() {
-// 	console.log("Our app is running on http://localhost:" + port);
-// });
-
+const Sentencer = require('sentencer')
+const randy = require('randy')
+const Readable = require('stream').Readable
+const stemplates = require('./resources/stemplates.json');
+const phrases = require('./resources/phrases.json');
 
 const { GraphQLServer } = require('graphql-yoga')
 
@@ -94,13 +23,14 @@ type UserType {
 	_id:String!
 	username:String!
 	wpm:String
-  info:String
+    info:String
 }
 
 type Query {
   info: String!
   Users: [UserType]!
   userInfo(username:String!):UserType
+  Text:String!
 }
 
 `
@@ -123,7 +53,30 @@ const resolvers = {
   		.then(data => {
   			return data;
   		})
-  		.catch(e => console.log('404 on user info')))
+  		.catch(e => console.log('404 on user info'))),
+
+      Text: async() => {
+      	const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1)
+      	const numberOfSentences = randy.randInt(8,12)
+      	console.log(numberOfSentences);
+      	let text = {}
+      	for(var i=0;i<numberOfSentences;i++) {
+      		text += generateSentenceForStream(i)
+
+      	}
+      	text = text.replace('[object Object]','');
+      	return(text);
+
+
+	    function generateSentenceForStream(isLastSentence) {
+		  var phrase = Math.random() < 0.25 ? `${randy.choice(phrases)} ` : ""
+		  const generated = Sentencer.make(randy.choice(stemplates))
+		  var sentence = capitalize(phrase + generated) + "."
+		  sentence += isLastSentence ? "" : " "
+		  return sentence
+		}
+
+      }
 
   },
 
