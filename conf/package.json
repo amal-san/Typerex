@@ -13,6 +13,8 @@
     "express": "~4.9.8",
     "graphql-yoga": "^1.18.3",
     "mongodb": "^3.5.3",
+    "randy": "^1.5.1",
+    "sentencer": "^0.2.1",
     "springedge": "^1.0.5"
   }
 }
