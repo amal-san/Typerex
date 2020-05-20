@@ -27,6 +27,10 @@ jobs:
        
     - name: Github email          
       run: git config --global user.name "amal-san"
+    
+    - name: Github setup
+      run: git config --global credential.helper wincred
+
 
     # Runs a set of commands using the runners shell
     - name:  Install Dependencies
