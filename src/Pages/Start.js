@@ -57,7 +57,7 @@ export function Start (props) {
 		        console.log(e)
 		    })
 
-	    },600000)
+	    },60000)
 	}
 
 	const history = useHistory();
@@ -121,8 +121,7 @@ export function Start (props) {
 
   //useEffect hooks for handling render
 
-	useEffect((props) => {
-  	      
+	useEffect((props) => {  	      
   	document.title='Start';
     document.getElementById('timer').innerHTML ='⏱️: 0 s';
   	const username = localStorage.getItem('typerex_username');
