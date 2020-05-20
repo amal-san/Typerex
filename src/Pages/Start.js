@@ -112,25 +112,21 @@ export function Start (props) {
 
 	function fetchText() {
 
-		const url = "https://typerex-sentencer.herokuapp.com/text/";
+    setLoading(true);
 
-        // Request
-        setLoading(true);
-		       
-        fetch(url).then(res => {
-            if(res.status === 200) {
-                return res.json()
-            }
-            else return null;
-        }).then(data => {
-            if(data!==null)  {
-            	setLoading(false)
-            	setData(true)
-            	setText(data.text)
-            } else {
-                setData(false)
-            }
-        });
+    auth.Text()
+      .then((data) => {
+
+        console.log(data.data.Text)   
+        setLoading(false)
+        setData(true)
+        setText(data.data.Text)
+        
+      })
+      .catch(e => {
+        setData(false)
+      })
+
 	}
 
   //useEffect hooks for handling render
