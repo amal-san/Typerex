@@ -29,7 +29,7 @@ export function Home(props) {
           </div>,{ hideAfter:2},
       );
     });
-  	const data = await auth.login(username)
+  	await auth.login(username)
     		.then((data) => {
     			 localStorage.setItem('typerex_username',data.data.userAdd.username);
     			 localStorage.setItem('wpm',data.data.userAdd.wpm);
