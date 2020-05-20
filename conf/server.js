@@ -56,7 +56,7 @@ const resolvers = {
   		.catch(e => console.log('404 on user info'))),
 
       Text: async() => {
-      	const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1)
+      	const capitalize = string => ' ' + string.charAt(0).toUpperCase() + string.slice(1)
       	const numberOfSentences = randy.randInt(8,12)
       	console.log(numberOfSentences);
       	let text = {}
