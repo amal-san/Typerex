@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Typerex/static/css/main.92cebea3.chunk.css",
-    "main.js": "/Typerex/static/js/main.a21797b1.chunk.js",
-    "main.js.map": "/Typerex/static/js/main.a21797b1.chunk.js.map",
+    "main.js": "/Typerex/static/js/main.19bc58dd.chunk.js",
+    "main.js.map": "/Typerex/static/js/main.19bc58dd.chunk.js.map",
     "runtime-main.js": "/Typerex/static/js/runtime-main.906e8eaf.js",
     "runtime-main.js.map": "/Typerex/static/js/runtime-main.906e8eaf.js.map",
     "static/css/2.b697670c.chunk.css": "/Typerex/static/css/2.b697670c.chunk.css",
-    "static/js/2.0e0bcbe4.chunk.js": "/Typerex/static/js/2.0e0bcbe4.chunk.js",
-    "static/js/2.0e0bcbe4.chunk.js.map": "/Typerex/static/js/2.0e0bcbe4.chunk.js.map",
+    "static/js/2.4890c7eb.chunk.js": "/Typerex/static/js/2.4890c7eb.chunk.js",
+    "static/js/2.4890c7eb.chunk.js.map": "/Typerex/static/js/2.4890c7eb.chunk.js.map",
     "index.html": "/Typerex/index.html",
-    "precache-manifest.70ee92b7c6feffc4bc687af14d3f5cbf.js": "/Typerex/precache-manifest.70ee92b7c6feffc4bc687af14d3f5cbf.js",
+    "precache-manifest.230c05d387bd060fd40f55de3b3ac547.js": "/Typerex/precache-manifest.230c05d387bd060fd40f55de3b3ac547.js",
     "service-worker.js": "/Typerex/service-worker.js",
     "static/css/2.b697670c.chunk.css.map": "/Typerex/static/css/2.b697670c.chunk.css.map",
     "static/css/main.92cebea3.chunk.css.map": "/Typerex/static/css/main.92cebea3.chunk.css.map",
-    "static/js/2.0e0bcbe4.chunk.js.LICENSE.txt": "/Typerex/static/js/2.0e0bcbe4.chunk.js.LICENSE.txt"
+    "static/js/2.4890c7eb.chunk.js.LICENSE.txt": "/Typerex/static/js/2.4890c7eb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.906e8eaf.js",
     "static/css/2.b697670c.chunk.css",
-    "static/js/2.0e0bcbe4.chunk.js",
+    "static/js/2.4890c7eb.chunk.js",
     "static/css/main.92cebea3.chunk.css",
-    "static/js/main.a21797b1.chunk.js"
+    "static/js/main.19bc58dd.chunk.js"
   ]
 }
