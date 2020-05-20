@@ -57,7 +57,7 @@ export function Start (props) {
 		        console.log(e)
 		    })
 
-	    },60000)
+	    },600000)
 	}
 
 	const history = useHistory();
@@ -110,7 +110,7 @@ export function Start (props) {
       .then((data) => {
         setLoading(false);
         setData(true);
-        setText(data.data.Text.substr(1));
+        setText(data.data.Text);
         
       })
       .catch(e => {

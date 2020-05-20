@@ -56,23 +56,24 @@ const resolvers = {
   		.catch(e => console.log('404 on user info'))),
 
       Text: async() => {
-      	const capitalize = string => ' ' + string.charAt(0).toUpperCase() + string.slice(1)
+      	const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1)
       	const numberOfSentences = randy.randInt(8,12)
-      	console.log(numberOfSentences);
+        console.log(numberOfSentences);
       	let text = {}
-      	for(var i=0;i<numberOfSentences;i++) {
-      		text += generateSentenceForStream(i)
+        var i=0
+      	for(i=0;i<numberOfSentences;i++) {
+      		text += generateSentenceForStream(i,numberOfSentences)
 
       	}
       	text = text.replace('[object Object]','');
       	return(text);
 
 
-	    function generateSentenceForStream(isLastSentence) {
+	    function generateSentenceForStream(isLastSentence,numberOfSentences) {
 		  var phrase = Math.random() < 0.25 ? `${randy.choice(phrases)} ` : ""
 		  const generated = Sentencer.make(randy.choice(stemplates))
 		  var sentence = capitalize(phrase + generated) + "."
-		  sentence += isLastSentence ? "" : " "
+      sentence += (isLastSentence < numberOfSentences-1)? " " : ""
 		  return sentence
 		}
 
@@ -118,7 +119,7 @@ const resolvers = {
 
 }
 
-// 3
+
 const server = new GraphQLServer({
   typeDefs,
   resolvers,
