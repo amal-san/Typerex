@@ -30,6 +30,6 @@ jobs:
     - name: Installing dependencies
       run: yarn install
       
-    - name: Deploying
-      run: yarn run deploy
+    - name: Building
+      run: yarn build
 
