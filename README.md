@@ -1,6 +1,6 @@
 # Typerex
 
-![build](https://github.com/amal-san/Typerex/workflows/build/badge.svg) ![test](https://github.com/amal-san/Typerex/workflows/test/badge.svg)
+![build](https://github.com/amal-san/Typerex/workflows/build/badge.svg?branch=master) ![test](https://github.com/amal-san/Typerex/workflows/test/badge.svg?branch=master)
 
 Open source typing platform made  with React + Apollo + Graphql
 
