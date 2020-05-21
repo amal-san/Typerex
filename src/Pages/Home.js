@@ -6,6 +6,7 @@ import { GoRepoForked } from "react-icons/go";
 import { useHistory } from "react-router-dom";
 import ReactLoading from "react-loading";
 import cogoToast from 'cogo-toast';
+import LoadingShip from '../Components/ship_with_water.png'
 
 
 
@@ -151,20 +152,24 @@ export function Home(props) {
 
     if (isloggedin) {
     	return (
-    		 <>
-
-	         <div className="home" style={{ height: "100vh",background:'white',margin:'0 auto',padding:'10%'}}>
-		      <ReactLoading type={'bubbles'} color={'orangered'} height={150} width={250} className='loader'/>
-	         </div> 
+    	<>
+       <div className="home" style={{ height: "100vh",background:'white',margin:'0 auto',padding:'10%'}}>
+          <div className='loading-main'>
+            <img className="loading--image" src={LoadingShip} alt='ship'></img>
+            <h2>Loading <span className='loading-span'> . </span><span className='loading-span'> . </span><span className='loading-span'> . </span></h2>
+            </div>
+          </div>
+       
+	        
 			</>	
 		);
     }
     else {
     	return (
-    		<>
-		      <div className="home" style={{ height: "101vh",background:'orangered' }}>
-		      	{home}
-	         </div> 
+    	<>
+        <div className="home" style={{ height: "101vh",background:'orangered' }}>
+            {home}
+        </div> 
 			</>
 		);
 

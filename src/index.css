@@ -458,4 +458,69 @@ body {
   background:#ffdfd3!important;
 }
 
-	
+.loading--image {
+  width: auto;
+  height: auto;
+  margin:0 auto;
+  animation:run 1s infinite;
+  transition: transform .2s ease-in-out;
+
+}
+
+
+@keyframes run {
+  0% {
+  transform:rotate(0deg);
+  }
+  15%{
+    transform: rotate(2deg);
+  }
+  25% {
+    transform: rotate(4deg)
+
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+
+  65% {
+    transform: rotate(4deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform:rotate(0deg);
+  }
+}
+
+.loading-main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top:5%;
+}
+
+.loading-main > h2 {
+  margin:0 auto;
+}
+
+
+.loading-span {
+  animation: load 2s infinite;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+
+  }
+ 
+}
