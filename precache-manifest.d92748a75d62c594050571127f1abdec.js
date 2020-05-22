@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3255bfb11cfcebd710cf95045a9549ec",
+    "revision": "3765c24c163974affaa1acb448f6ef92",
     "url": "/Typerex/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Typerex/static/css/2.b697670c.chunk.css"
   },
   {
-    "revision": "4fcb53d3ad2fda8aa023",
+    "revision": "fd27d5d68bb4b8ae3b0c",
     "url": "/Typerex/static/css/main.0626a8f7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Typerex/static/js/2.58a4f8c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4fcb53d3ad2fda8aa023",
-    "url": "/Typerex/static/js/main.0308e6ed.chunk.js"
+    "revision": "fd27d5d68bb4b8ae3b0c",
+    "url": "/Typerex/static/js/main.475db0e2.chunk.js"
   },
   {
     "revision": "89fb23fe74b920d1b838",
@@ -30,5 +30,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "876623c4a72a9a0f55d37bf8d8071855",
     "url": "/Typerex/static/media/ship_with_water.876623c4.png"
+  },
+  {
+    "revision": "b9d594aeb4f8f28ffd789c3263efcf4d",
+    "url": "/Typerex/static/media/typewriter.b9d594ae.svg"
   }
 ]);

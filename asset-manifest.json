@@ -1,26 +1,27 @@
 {
   "files": {
     "main.css": "/Typerex/static/css/main.0626a8f7.chunk.css",
-    "main.js": "/Typerex/static/js/main.0308e6ed.chunk.js",
-    "main.js.map": "/Typerex/static/js/main.0308e6ed.chunk.js.map",
+    "main.js": "/Typerex/static/js/main.475db0e2.chunk.js",
+    "main.js.map": "/Typerex/static/js/main.475db0e2.chunk.js.map",
     "runtime-main.js": "/Typerex/static/js/runtime-main.906e8eaf.js",
     "runtime-main.js.map": "/Typerex/static/js/runtime-main.906e8eaf.js.map",
     "static/css/2.b697670c.chunk.css": "/Typerex/static/css/2.b697670c.chunk.css",
     "static/js/2.58a4f8c5.chunk.js": "/Typerex/static/js/2.58a4f8c5.chunk.js",
     "static/js/2.58a4f8c5.chunk.js.map": "/Typerex/static/js/2.58a4f8c5.chunk.js.map",
     "index.html": "/Typerex/index.html",
-    "precache-manifest.9bc73495e9f70bf902bd171670d666e9.js": "/Typerex/precache-manifest.9bc73495e9f70bf902bd171670d666e9.js",
+    "precache-manifest.d92748a75d62c594050571127f1abdec.js": "/Typerex/precache-manifest.d92748a75d62c594050571127f1abdec.js",
     "service-worker.js": "/Typerex/service-worker.js",
     "static/css/2.b697670c.chunk.css.map": "/Typerex/static/css/2.b697670c.chunk.css.map",
     "static/css/main.0626a8f7.chunk.css.map": "/Typerex/static/css/main.0626a8f7.chunk.css.map",
     "static/js/2.58a4f8c5.chunk.js.LICENSE.txt": "/Typerex/static/js/2.58a4f8c5.chunk.js.LICENSE.txt",
-    "static/media/ship_with_water.png": "/Typerex/static/media/ship_with_water.876623c4.png"
+    "static/media/ship_with_water.png": "/Typerex/static/media/ship_with_water.876623c4.png",
+    "static/media/typewriter.b9d594ae.svg": "/Typerex/static/media/typewriter.b9d594ae.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.906e8eaf.js",
     "static/css/2.b697670c.chunk.css",
     "static/js/2.58a4f8c5.chunk.js",
     "static/css/main.0626a8f7.chunk.css",
-    "static/js/main.0308e6ed.chunk.js"
+    "static/js/main.475db0e2.chunk.js"
   ]
 }
