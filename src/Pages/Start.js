@@ -21,11 +21,15 @@ export function Start (props) {
 
 	function startTimer(e) {
      let count = 1;
-     document.getElementById("paraEnter").focus();
-	   document.getElementById('paraEnter').disabled = false;
-	   document.getElementById('startbt').style.background = 'green';
-	   var start = document.getElementById("startbt");
-	   start.className += "disabled";
+     var paraEnter = document.getElementById("paraEnter");
+     paraEnter.onpaste = (e) => {
+          e.preventDefault();
+     }
+     paraEnter.focus();
+     paraEnter.disabled = false;
+     var startBt = document.getElementById("startbt");
+	   startBt.style.background = 'green'; 
+	   startBt.className += "disabled";
 
      var timer = 
      setInterval(function(){
