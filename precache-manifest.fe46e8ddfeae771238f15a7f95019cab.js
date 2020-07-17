@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d310cf2d6ca12f388218985753ed4a31",
+    "revision": "c9056707ad86854a25ae390864fd4626",
     "url": "/Typerex/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Typerex/static/css/2.b697670c.chunk.css"
   },
   {
-    "revision": "27edc924da543fb9d141",
+    "revision": "a717da1b0cdd01ffacae",
     "url": "/Typerex/static/css/main.0626a8f7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Typerex/static/js/2.58a4f8c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "27edc924da543fb9d141",
-    "url": "/Typerex/static/js/main.3b2b7edf.chunk.js"
+    "revision": "a717da1b0cdd01ffacae",
+    "url": "/Typerex/static/js/main.9368c9f4.chunk.js"
   },
   {
     "revision": "89fb23fe74b920d1b838",
