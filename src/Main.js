@@ -19,7 +19,7 @@ function Main() {
           <Header/>
             <section>
               <Route exact path="/" component={Home}/>
-              <ProtectedRoute exact path="/start" component={Start}/>
+              <Route exact path="/start" component={Start}/>
             </section>
         </>
       </Switch>
