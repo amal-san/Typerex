@@ -1,151 +1,134 @@
-import { gql } from 'apollo-boost';
-import ApolloClient from 'apollo-boost';
-
-
-
+import { gql } from "apollo-boost";
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: 'https://typerex.herokuapp.com/',
+  uri: "https://typerex-git-master-amalsans-projects.vercel.app/",
 });
 
-
-
-
-
 class Auth {
+  constructor() {
+    this.authenticated = false;
+  }
 
-	constructor(){
-
-		this.authenticated = false;
-	}
-
-
-
-	async userUpdate(username,wpm) {
-		const result = await client 
-			.mutate({
-				mutation:gql`
+  async userUpdate(username, wpm) {
+    const result = await client
+      .mutate({
+        mutation: gql`
 				mutation {
 				  userUpdate(username:"${username}" wpm:"${wpm}"){
 				  	username
 				    wpm
 					}
 				}
-				`
-			})
-			.then(function(result){
-				return result;
-			})
-			.catch(e => console.log(e))
+				`,
+      })
+      .then(function (result) {
+        return result;
+      })
+      .catch((e) => console.log(e));
 
-			if(result) {
-				this.authenticated = true;
-				localStorage.setItem('isLoggedin',true)
-			}
-			return result;
+    if (result) {
+      this.authenticated = true;
+      localStorage.setItem("isLoggedin", true);
+    }
+    return result;
+  }
 
-	}
-
-	async login(username) {
-		const result = await client
-		  .mutate({
-		  	mutation:gql`
+  async login(username) {
+    const result = await client
+      .mutate({
+        mutation: gql`
 		  	mutation {
 				  userAdd(username:"${username}"){
 				    username
 				    wpm
 					}
 				}
-		  	`
-		  })
-		  .then(function(result){
-		  	return result;
-		  })
-		  .catch(e => console.log(e))
-		  if (result) {
-			this.authenticated = true;
-			localStorage.setItem('isLoggedin',true)
-		  }
-   		  return result;
-	}
+		  	`,
+      })
+      .then(function (result) {
+        return result;
+      })
+      .catch((e) => console.log(e));
+    if (result) {
+      this.authenticated = true;
+      localStorage.setItem("isLoggedin", true);
+    }
+    return result;
+  }
 
-	async userInfo(username) {
-		const result = await client
-		  .query({
-		    query: gql`
+  async userInfo(username) {
+    const result = await client
+      .query({
+        query: gql`
 		     {
 			  userInfo(username:"${username}"){
 			    username
 			    wpm
 			  }
 			 }
-		    `
-		  })
-		  .then(function(result) {
-		  	return result
-		  });
+		    `,
+      })
+      .then(function (result) {
+        return result;
+      });
 
-		if (result) {
-			this.authenticated = true;
-			localStorage.setItem('isLoggedin',true)
-		}
-		return result;
-	}
+    if (result) {
+      this.authenticated = true;
+      localStorage.setItem("isLoggedin", true);
+    }
+    return result;
+  }
 
-	async Text() {
-		const result = await client
-		  .query({
-			query:gql`
-			{
-				Text
-			}`
-		})
-		.then(function (result){
-			return result;
-		})
-		.catch ( e => {
-			return e;
-		} )
-		
-	  return result;
-	}
+  async Text() {
+    const result = await client
+      .query({
+        query: gql`
+          {
+            Text
+          }
+        `,
+      })
+      .then(function (result) {
+        return result;
+      })
+      .catch((e) => {
+        return e;
+      });
 
+    return result;
+  }
 
-	logout(cb) {
-		this.authenticated = false;
-		cb()
-	}
+  logout(cb) {
+    this.authenticated = false;
+    cb();
+  }
 
-	async userDelete(username) {
-		const result = await client
-		  .mutate({
-		  	mutation:gql`
+  async userDelete(username) {
+    const result = await client
+      .mutate({
+        mutation: gql`
 		  	mutation {
 				  userDelete(username:"${username}"){
 				    username
 
 					}
 				}
-		  	`
-		  })
-		  .then(function(result){
-		  	return result;
-		  })
-		  .catch(e => console.log(e))
-   		  return result;
-	}
-	
+		  	`,
+      })
+      .then(function (result) {
+        return result;
+      })
+      .catch((e) => console.log(e));
+    return result;
+  }
 
-
-
-	isAuthenticated() {
-
-		return (localStorage.getItem('isLoggedin') ? localStorage.getItem('isLoggedin') : this.authenticated);
-	}
-
-
+  isAuthenticated() {
+    return localStorage.getItem("isLoggedin")
+      ? localStorage.getItem("isLoggedin")
+      : this.authenticated;
+  }
 }
-
 
 // const USERINFO = gql`
 // {
@@ -155,17 +138,12 @@ class Auth {
 //   }
 // }`
 
-
 // // const USERUPDATE;
 
-
-// // const USERDELETE; 
-
+// // const USERDELETE;
 
 // // const USERADD;
 
-
 // // const USERLIST;
-
 
 export default new Auth();
